@@ -1,0 +1,81 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+div.Basic-Text-Frame {
+	border-style:solid;
+}
+p.Basic-Paragraph {
+	color:#000000;
+	font-family:"Minion Pro", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.CharOverride-1 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:25px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-2 {
+	font-family:Helvetica, sans-serif;
+	font-size:20px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-3 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:20px;
+	font-style:normal;
+	font-weight:bold;
+}
+#_idContainer000, #_idContainer001, #_idContainer002, #_idContainer003, #_idContainer022, #_idContainer023, #_idContainer024, #_idContainer025 {
+	display:inline-block;
+	height:126px;
+	width:140px;
+}
+#_idContainer008 {
+	display:inline-block;
+	height:575px;
+	width:274px;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	background-color:#25408f;
+	border-width:0px;
+}
+div._idGenObjectStyleOverride-2 {
+	border-width:0px;
+}
+div._idGenObjectStyleOverride-3 {
+	background-color:#f49ac1;
+	border-width:0px;
+}
+div._idGenObjectLayout-1 {
+	text-align:center;
+}
