@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<title> Languages in Society</title>
+			<h1> <b> <center> Langauges in Society </center> </b> </h1>
+				<h3><center> By: Allison Patten </center> </h3>
+
+		<!--Jquery-->
+        	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<!--Population Map-->
+        	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+        <!--Pie Chart-->
+        	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/data.js"></script>
+            <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+        <!--Bar Chart-->
+        	<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script>
+        	
+
+         <!--START CSS-->
+        <style type="text/css">
+         	
+          body{
+            background-color: #B4DCED;
+          },
+
+          .pie-chart{
+          	float: right;
+          	width: 50%;
+          	display: block;
+          },
+
+          .p3{
+          	display: block;
+          	float:left;
+          	width:50%;
+          },
+
+          .bar{
+          	float:right;
+          }
+          .again{
+          	float:left;
+          	display: block;
+          	margin-left: 10px;
+          	width: 405;
+          }
+         
+        </style>
+
+    </head>
+
+    <body>
+
+      <!--Population Map-->
+
+      	<!--JS-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+       		 <script type="text/javascript" language='JavaScript'>
+
+            google.charts.load('upcoming', {'packages':['geochart']});
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+
+        var data = google.visualization.arrayToDataTable([
+
+          ['Country', 'Population'],
+
+        /* Americas */ 
+          ['United States' , 324118787],
+          ['Brazil' , 209567920 ], 
+          ['Canada' , 36286378 ],
+          ['Colombia' , 48654392 ],
+          ['Argentina' , 43847277 ],
+          ['Mexico ' , 128632004 ],
+          ['Venezuela' , 31518855 ],
+          ['Ecuador ' , 1635450],
+          ['Greenland' , 56196],
+          ['Cuba', 11392889],
+          ['Bolivia' , 10888402],
+          ['Haiti' , 10848175],
+          ['Dominican Republic' , 10648613],
+          ['Honduras' , 8189501],
+          ['Costa Rica', 4857218],
+          ['Panama', 3990406],
+          ['Puerto Rico', 3680772],
+          ['Jamaica', 2803362],
+          ['Peru', 31774225],
+          ['Paraguay', 6725430],
+          ['Guyana' , 770610],
+          ['Uruguay' , 3444071],
+          ['Chile' , 18131850],
+          ['El Salvador', 6146419],
+          ['Nicaragua' , 6150035],
+          ['Belize', 366942],
+          ['Guatemala' , 16672956],
+
+        /* Europe */
+          ['Russia', 143439832],
+          ['Germany', 80682351],
+          ['United Kingdom', 65111143],
+          ['France', 64668129],
+          ['Italy', 59801004],
+          ['Spain', 46064604],
+          ['Poland', 38593161],
+          ['Netherlands', 16979729 ],
+          ['Austria', 8569633],
+          ['Switzerland', 8379477],
+          ['Finland', 5523904],
+          ['Ireland', 4713993],
+          ['Norway', 5271958 ],
+          ['Sweden', 9851852],
+          ['Portugal', 10304434],
+          ['Denmark', 5690750 ],
+          ['Iceland' , 331778],
+          ['Ukraine', 44624373],
+          ['Romania', 19372734],
+          ['Bulgaria', 7097796],
+          ['Czech Republic', 10584058],
+          ['Hungary', 9821318],
+          ['Belarus', 9481521],
+          ['Austria', 8569633],
+          ['Slovakia' , 5429418],
+          ['Belgium', 11371928],
+          ['Croatia', 4225001],
+          ['Bosnia and Herzegovina' , 3802134],
+          ['Greece' , 10919459],
+          ['Serbia' , 8812405],
+
+        /* Asia */
+          ['Afghanistan', 33369945],
+          ['China', 1382323332],
+          ['Japan', 126323715 ],
+          ['Indonesia', 260581100],
+          ['India', 1326801576],
+          ['Saudi Arabia', 32157974],
+          ['Turkey', 79622062],
+          ['Israel' , 8192463],
+          ['Singapore', 5696506],
+          ['Cambodia' , 15827241],
+          ['Iran' , 80043146  ],
+          ['Iraq' , 37547686],
+          ['Sri Lanka' , 20810816],
+          ['Malaysia', 30751602],
+          ['Mongolia', 3006444],
+          ['Qatar' , 2291368],
+          ['Republic of Korea' , 50503933],
+          ['Kazakhstan' ,17855384],
+          ['Pakistan' , 192826502],
+          ['Uzbekistan' , 30300446],
+          ['Turkmenistan' , 5438670],
+          ['Syria' , 18563595 ],
+          ['Nepal' , 28850717],
+          ['Thailand', 68146609],
+          ['Viet Nam', 94444200],
+          ['Bangladesh', 162910864],
+          ['Yemen', 27477600],
+          ['Philippines', 102250133],
+
+        /* Africa */
+          ['Sudan' , 41175541],
+          ['Egypt', 93383574],
+          ['South Africa' , 54978907],
+          ['Kenya', 47251449],
+          ['Tanzania', 55155473],
+          ['Democratic Republic of the Congo', 79722624],
+          ['Morocco', 34817065],
+          ['Mozambique', 28751362],
+          ['Ghana', 28033375],
+          ['Algeria', 40375954],
+          ['Uganda', 4022768],
+          ['Nigeria', 186987563],
+          ['Niger', 20715285  ],
+          ['Madagascar', 24915822],
+          ['Mali', 18134835],
+          ['Côte dIvoire', 23254184],
+          ['Zimbabwe', 15966810],
+          ['Rwanda', 11882766],
+          ['Tunisia', 11375220],
+          ['Chad', 14496739],
+          ['Guinea' , 12947122],
+          ['South Sudan', 12733427],
+          ['Senegal', 15589485],
+          ['Burundi', 11552561],
+          ['Libya', 6330159],
+          ['Western Sahara', 584206],
+          ['Mauritania', 4166463],
+          ['Congo', 4740992],
+          ['Georgia', 3979781],
+        
+        /* Oceania */
+          ['Australia', 24309330],
+          ['New Zealand', 4565185],
+          ['Papua New Guinea', 7776115],
+          ['Fiji', 897537],
+
+        ]);
+
+        var options = {
+
+          colorAxis: {colors: ['#119957', '#FF4819' , '#CA1913']},
+          backgroundColor: '#B4DCED',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('pop-map'));
+
+        chart.draw(data, options);
+      }
+        </script>
+      <!--END population map-->
+      
+      <!--Pie Chart-->
+      		<script type="text/javascript">
+      			$(function () {
+    // Create the chart
+    Highcharts.chart('pie-chart', {
+        chart: {
+        	backgroundColor: '#B4DCED', 
+            type: 'pie'
+        },
+        title: {
+            text: 'GDP Per Language',
+            color: 'black',
+            style: {
+                     fontSize: '24px'
+                    },
+        },
+        subtitle: {
+            text: '2016'
+        },
+        plotOptions: {
+        	pie: {
+        		allowPointSelect: true,
+        		colorAxis: {colors:['#3FF2BC', '#445953' , '#45BF55', '#C77AB5' , '#D83FF2' ]}
+        	},
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}:{point.y}</span>'
+        },
+        series: [{
+            name: 'Percent of World GDP',
+            colorByPoint: true,
+            data: [{
+                name: 'English',
+                y: 29.30,
+                sliced: true,
+                selected: true,
+                drilldown: 'English'
+            }, {
+                name: 'Chinese',
+                y: 12.50,
+                drilldown: 'Chinese'
+            }, {
+                name: 'Japanese',
+                y: 7,
+                drilldown: 'Japanese'
+            }, {
+                name: 'Spanish',
+                y: 6.50,
+                drilldown: 'Spanish'
+            }, {
+                name: 'German',
+                y: 5.50,
+                drilldown: 'German'
+            }, {
+                name: 'French',
+                y: 4.60,
+                drilldown: 'French'
+            },
+            {
+                name: 'Portuguese',
+                y: 3.30,
+                drilldown: 'Portuguese'
+            }, {
+                name: 'Italian',
+                y: 3.20,
+                drilldown: 'Italian'
+            }, {
+                name: 'Russian',
+                y: 2.60,
+                drilldown: 'Russian'
+            }, {
+                name: 'Arabic',
+                y: 2.50,
+                drilldown: 'Arabic'
+            },]
+        }],
+        drilldown: {
+            series: [{
+                name: 'Millions of U.S. Dollars',
+                id: 'English',
+                data: [
+                    ['United States', 17946966],
+                    ['United Kingdom', 10866444],
+                    ['Canada', 1550537],
+                    ['Australia', 1339539],
+                ]
+            }, {
+                name: 'Millions of U.S. Dollars',
+                id: 'Chinese',
+                data: [
+                    ['China', 10866444],
+                    ['Indonesia', 861934],
+                    ['Thailand', 395282],
+                    ['Malaysia', 296218],
+                ]
+            }, {
+                name: 'Millions of U.S. Dollars',
+                id: 'Arabic',
+                data: [
+                    ['Saudi Arabia', 646002],
+                    ['Egypt', 330779],
+                    ['Qatar', 166908 ],
+                    ['Algeria', 166839],
+                ]
+            }, {
+                name: 'Millions of U.S. Dollars',
+                id: 'Spanish',
+                data: [
+                    ['Spain', 1199057],
+                    ['Mexico', 1144331],
+                    ['Argentina', 53169],
+                    ['Colombia', 292080],
+                ]
+            },]
+        }
+    });
+});
+                </script>
+
+
+
+      		</script>
+
+      <!--Bar Chart-->
+      		<script type="text/javascript">
+      			$(function () {
+    Highcharts.chart('bar', {
+        chart: {
+        	backgroundColor: '#B4DCED',
+            type: 'bar'
+        },
+        title: {
+            text: 'Industry',
+            color: '#000000',
+            style: {
+                     fontSize: '24px'
+                    },
+
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Engineering', 'Banking' ,'Manufacturing','Education' , 'Overall'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Score',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: 'out of 100%'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: false,
+                    color:'#333333'
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 0,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'English Proficiency',
+            color: '#119957',
+            data: [59.7, 57.2, 51.4, 42.8, 52.6]
+        },]
+    });
+});
+      		</script>
+
+      <!--CONTENT-->
+				
+			<!--MAP-->
+            	<div id="pop-map" class="world" style="width: 1450px; height: 500px;"> <center></center></div>
+    		
+    		<div class="p1"> <p>Billions of people around the world are trying to learn English as an economic advantage not only in their own country, but globally too. English has been dubbed the official language of business, mathematics, science, aviation, and other fields, according to the Harvard Business Review. When there is a language barrier between employees, or between one branch of a company with another, mistakes happen and jobs are lost. That is why a universal language for a particular fields of work have been established, and a large percentage of them have been established as English. </p>
+    		<p>While there is simply a convenience factor with having the entire workforce speaking the same language, sometimes it can be much more critical. Take aviation for example. Miscommunication between employees could be the difference between life and death.</p> </div>
+            <!--Pie Chart-->
+           
+            <div id="pie-chart" class="pie-chart" style="min-width: 310px; max-width: 600px; height: 400px; border: 0px; margin: 0 auto"></div>	
+            	<p class="p2">The countries that speak English collectively have a higher Gross Domestic Product (GDP) than countries that speak any other language, according to <a href="http://www.ef.edu/epi/"> Education First </a> . This trend mostly follows suit with individual countries GDP too. This trend is called <a href="https://www.linkedin.com/pulse/japans-new-business-language-hiroshi-mikitani?trk=mp-reader-card">"Enlishnization"</a>. </p>
+            		<p class = "p3">English holds the highest GDP due to the number of work fields in which it holds the official language. Chinese is next due to it's up-and-coming industrial economy and the sheer population size of China. Japanese follows because of Japan's booming tech industry. Spanish is the fourth largest GDP by language due to the high amount of countries with Spanish as the native tounge. </p>
+            		<p>
+
+            <!--Bar Chart-->
+            	<div id="bar" class="bar" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+            	<p> Since the launch of the term "Englishnization" in 2001, very few career fields have shown consistent strength in English skills. Engineering was the top field but it still has room for improvement. As you look through the data, it is obvious that the fields with a higher <a href="http://www.ef.edu/epi/">English Proficiency Index </a> (EPI) are the more creative core jobs that tend to hire highly educated employees. It makes sense that the simplistic fields lag behind because they do not necessarily require a high level of training.</p>
+
+            <div><h3> Links </h3> 
+            		<p class="again"> Click <a href="https://docs.google.com/spreadsheets/d/1hUP2OHi6xEaLVsK3wDR9bQeJcfDy87wTv70iEduP8h8/edit?usp=sharing">here</a> for a look at the stats, data, and sources of this information.</p></div>
+    </body>
+</html>
